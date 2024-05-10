@@ -103,17 +103,12 @@ body {
 }
 
 
-/* For mobile phones */
+/* For mobile phones and tablets */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
     .container {
         margin: 50px 20px;
-    }
-    .name p {
-        font-size: 8px;
-    }
-    .explanation1 {
-        padding-top: 2px;
+        grid-auto-flow: row;
     }
     .item1,
     .item2,
@@ -122,28 +117,25 @@ body {
     .item5 {
         grid-column-start: auto;
         grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
     }
 }
 
 
 /* For desktop screens */
 
-
-/* @media only screen and (min-width: 601px) {
+@media only screen and (min-width: 901px) {
     .container {
         margin: 100px;
-    }
-    .name p {
-        font-size: 10px;
-    }
-    .explanation1 {
-        padding-top: 10px;
+        grid-auto-flow: column;
     }
     .item1,
     .item2,
     .item3,
     .item4,
     .item5 {
-        grid-column: span 1;
+        grid-column: span auto;
+        grid-row: span auto;
     }
-} */
+}
